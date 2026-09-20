@@ -1,0 +1,245 @@
+/* ===================================================
+   1. RESET Y VARIABLES GLOBALES
+   =================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primario: #1e293b;
+  --color-acento: #2563eb;
+  --color-fondo: #f8fafc;
+  --color-tarjeta: #ffffff;
+  --color-texto: #334155;
+  --color-borde: #e2e8f0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* ===================================================
+   2. REGLAS MULTIMEDIA RESPONSIVAS (Punto Clave)
+   =================================================== */
+
+/* Garantiza que las imágenes nunca desborden a su contenedor */
+.imagen-responsive {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Formato flexible para las figuras */
+.figura-media {
+  background-color: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.figura-media figcaption {
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  background-color: #0f172a;
+  text-align: center;
+}
+
+/* Contenedor de video fluido */
+.contenedor-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* ===================================================
+   3. ESTILOS BASE (Mobile-First)
+   =================================================== */
+
+.encabezado-principal {
+  background-color: var(--color-primario);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.navegacion-principal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.navegacion-principal a {
+  color: #94a3b8;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.navegacion-principal a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* Hero section */
+.hero {
+  background-color: var(--color-acento);
+  color: white;
+  padding: 2.5rem 1rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Layout de contenido */
+.contenedor-layout {
+  width: 90%;
+  margin: 1.5rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Secciones y tarjetas */
+.seccion-articulos,
+.seccion-multimedia,
+.barra-lateral {
+  background-color: var(--color-tarjeta);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-borde);
+}
+
+hgroup {
+  margin-bottom: 1.25rem;
+}
+
+hgroup h1, hgroup h2, hgroup h3 {
+  color: var(--color-primario);
+}
+
+hgroup p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.grilla-articulos {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tarjeta-articulo {
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.cuerpo-articulo {
+  padding: 1rem;
+}
+
+.lista-recursos {
+  list-style: none;
+  padding-top: 0.5rem;
+}
+
+.lista-recursos li {
+  margin-bottom: 0.5rem;
+}
+
+.lista-recursos a {
+  color: var(--color-acento);
+  text-decoration: none;
+}
+
+.pie-pagina {
+  background-color: var(--color-primario);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+
+/* ===================================================
+   4. MEDIA QUERY: TABLETS (≥ 768px)
+   =================================================== */
+@media (min-width: 768px) {
+
+  .encabezado-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  .navegacion-principal {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  /* Los artículos pasan de estar apilados a estar en 2 columnas */
+  .grilla-articulos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Estructura de 2 columnas principales: Main (izquierda) y Aside (derecha) */
+  .contenedor-layout {
+    flex-direction: row;
+  }
+
+  .contenido-principal {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .barra-lateral {
+    flex: 1;
+    align-self: flex-start;
+  }
+}
+
+
+/* ===================================================
+   5. MEDIA QUERY: ESCRITORIO GRANDE (≥ 1024px)
+   =================================================== */
+@media (min-width: 1024px) {
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Delimitación del ancho máximo en pantallas ultra-anchas */
+  .encabezado-principal,
+  .hero,
+  .contenedor-layout,
+  .pie-pagina {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

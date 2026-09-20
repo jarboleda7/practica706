@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitio Responsivo Semántico con Multimedia</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- Encabezado principal del sitio -->
+  <header class="encabezado-principal">
+    <div class="logo">DevStudio</div>
+    <nav class="navegacion-principal" aria-label="Menú principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#articulos">Artículos</a>
+      <a href="#multimedia">Video</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Presentación principal (Hero) -->
+  <section class="hero" id="inicio">
+    <hgroup>
+      <h1>Diseño Web Moderno y Semántico</h1>
+      <p>Aprende a maquetar páginas adaptables utilizando HTML5 y CSS3</p>
+    </hgroup>
+  </section>
+
+  <!-- Layout estructurado -->
+  <div class="contenedor-layout">
+
+    <!-- Área de contenido principal -->
+    <main class="contenido-principal">
+
+      <!-- Sección de artículos -->
+      <section class="seccion-articulos" id="articulos">
+        <hgroup>
+          <h2>Artículos Destacados</h2>
+          <p>Publicaciones sobre desarrollo frontend y buenas prácticas</p>
+        </hgroup>
+
+        <div class="grilla-articulos">
+          
+          <article class="tarjeta-articulo">
+            <figure class="figura-media">
+              <img src="https://picsum.photos/800/450?random=1" alt="Imagen representativa de código en pantalla" class="imagen-responsive">
+              <figcaption>Estructura clara con etiquetas semánticas.</figcaption>
+            </figure>
+            <div class="cuerpo-articulo">
+              <h3>Uso de HTML5 Semántico</h3>
+              <p>El uso de etiquetas como <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code> y <code>&lt;hgroup&gt;</code> mejora la accesibilidad y el SEO de tus aplicaciones web.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta-articulo">
+            <figure class="figura-media">
+              <img src="https://picsum.photos/800/450?random=2" alt="Imagen representativa de diseño responsivo en móviles" class="imagen-responsive">
+              <figcaption>Adaptabilidad en múltiples dispositivos.</figcaption>
+            </figure>
+            <div class="cuerpo-articulo">
+              <h3>Media Queries Estratégicas</h3>
+              <p>Construir con un enfoque <em>Mobile-First</em> permite escalabilidad y un rendimiento óptimo en pantallas pequeñas y grandes.</p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Sección multimedia con Video -->
+      <section class="seccion-multimedia" id="multimedia">
+        <hgroup>
+          <h2>Muestra de Multimedia</h2>
+          <p>Video HTML5 adaptado al ancho del contenedor</p>
+        </hgroup>
+
+        <figure class="figura-media">
+          <div class="contenedor-video">
+            <video controls poster="https://picsum.photos/800/450?random=3">
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+              Tu navegador no soporta el elemento de video.
+            </video>
+          </div>
+          <figcaption>Demostración de video responsivo embebido de forma nativa.</figcaption>
+        </figure>
+      </section>
+
+    </main>
+
+    <!-- Barra lateral de apoyo -->
+    <aside class="barra-lateral">
+      <hgroup>
+        <h3>Recursos Útiles</h3>
+        <p>Documentación y enlaces de interés</p>
+      </hgroup>
+      <ul class="lista-recursos">
+        <li><a href="#">Guía MDN de HTML5</a></li>
+        <li><a href="#">Flexbox Froggy</a></li>
+        <li><a href="#">Grid Garden</a></li>
+      </ul>
+    </aside>
+
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="pie-pagina">
+    <p>&copy; 2026 DevStudio - Módulo de Maquetación Responsiva.</p>
+  </footer>
+
+</body>
+</html>
